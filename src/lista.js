@@ -1,23 +1,25 @@
 module.exports = class Lista {
-
-    constructor(){
-    }
-
-    add(key,value) {
-
-    }
-
-    count() {
-        return 1;
-    }
-
-/*
     #elementos;
+
     constructor(){
         this.#elementos = [];
     }
-        count() {
+
+    add(key,value) {
+        this.#elementos.push({key,value});  
+    }
+
+    count() {
         return this.#elementos.length; 
+    }
+
+/*
+    
+    constructor(){
+        
+    }
+        count() {
+        
 
     }
 
