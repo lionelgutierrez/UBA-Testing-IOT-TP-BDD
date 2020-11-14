@@ -24,12 +24,12 @@ module.exports = class Lista {
     }
 
     find(key) {
-        /*
+        
         for (var indice = 0; indice < this.#elementos.length; indice++) {
             if (this.#elementos[indice].clave == key) {
                 return this.#elementos[indice].valor;
             }
-        }*/
+        }
         return NaN;
 
     }

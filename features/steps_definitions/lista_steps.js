@@ -34,8 +34,11 @@ Cuando('se elimina la clave {string}', function (clave) {
 });
 
 Entonces('se obtiene el valor NaN', function () {
-    // Write code here that turns the phrase above into concrete actions
     expect(contexto.encontrado).is.NaN;
+});
+
+Entonces('se obtiene el valor {string}', function (valor) {
+    expect(contexto.encontrado).is.equal(valor);
 });
 
 Entonces('la lista tiene {int} elemento(s) almacenado(s)', function (cantidad) {
