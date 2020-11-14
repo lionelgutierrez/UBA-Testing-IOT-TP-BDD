@@ -23,3 +23,11 @@ Escenario: Una lista con un solo elemento al que se agrega un elemento con clave
     Y se recupera la lista
     Entonces el valor del primer elemento es "valor"
     Y el valor del segundo elemento es "valor2"    
+
+Escenario: Una lista con un solo elemento al que se agrega un elemento con clave menor es una lista ordenada
+    Dado una lista con los siguientes elementos
+    | "claveInicial" | "valor"|
+    Cuando se agrega la pareja { "claveAgregadaMenor": "valor3" }
+    Y se recupera la lista
+    Entonces el valor del primer elemento es "valor3"
+    Y el valor del segundo elemento es "valor"    
