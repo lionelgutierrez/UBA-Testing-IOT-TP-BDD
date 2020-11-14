@@ -33,6 +33,16 @@ Cuando('se elimina la clave {string}', function (clave) {
     contexto.lista.delete(clave);
 });
 
+Cuando('se recupera la lista', function () {
+    // Write code here that turns the phrase above into concrete actions
+    contexto.listaRecuperada = contexto.lista.devolverListaArray();
+});
+
+Entonces('el valor del primer elemento es {string}', function (valor) {
+    // Write code here that turns the phrase above into concrete actions
+    expect(contexto.listaRecuperada[0].valor).is.equal(valor);
+  });
+
 Entonces('se obtiene el valor NaN', function () {
     expect(contexto.encontrado).is.NaN;
 });

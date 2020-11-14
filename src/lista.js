@@ -43,4 +43,11 @@ module.exports = class Lista {
     count() {
         return this.#elementos.length;
     }
+
+    devolverListaArray() {
+        var listasalida = this.#elementos.slice();
+        return listasalida;
+    }
+
+
 }
