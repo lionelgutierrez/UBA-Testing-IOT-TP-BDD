@@ -27,3 +27,4 @@ Escenario: Agregar un elemento repetido a una lista
     | "uno"  | 1 |
     Cuando se agrega la pareja { "uno": 2 }
     Entonces la lista tiene 1 elemento almacenado
+    

@@ -15,3 +15,4 @@ Escenario: Lista con un elemento
     | "clave" | "valor"|
     Cuando se busca la clave "clave"
     Entonces se obtiene el valor "valor"
+    
