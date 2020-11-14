@@ -9,7 +9,7 @@ module.exports = class Lista {
         this.#elementos.push({'clave': clave, 'valor': valor});
     }
 
-    indexOf(clave) {
+    indice(clave) {
         for (var indice = 0; indice < this.#elementos.length; indice++) {
             if (this.#elementos[indice].clave == clave) {
                 return indice;
@@ -19,7 +19,7 @@ module.exports = class Lista {
     }
 
     delete(clave) {
-        var indice = this.indexOf(clave);
+        var indice = this.indice(clave);
         if (!isNaN(indice)) {
             this.#elementos.splice(indice, 1);
             return
@@ -27,7 +27,7 @@ module.exports = class Lista {
     }
 
     find(clave) {
-        var indice = this.indexOf(clave);
+        var indice = this.indice(clave);
         if (!isNaN(indice)) {
             return this.#elementos[indice].valor;
         }
