@@ -23,9 +23,19 @@ Cuando('se agrega la pareja {}', function (pareja) {
     contexto.lista.add(Object.keys(pareja)[0], Object.values(pareja)[0]);
 });
 
+Cuando('se busca la clave {string}', function (clave) {
+    // Write code here that turns the phrase above into concrete actions
+    contexto.encontrado = contexto.lista.find(clave);
+});
+
 Cuando('se elimina la clave {string}', function (clave) {
     // Write code here that turns the phrase above into concrete actions
     contexto.lista.delete(clave);
+});
+
+Entonces('se obtiene el valor NaN', function () {
+    // Write code here that turns the phrase above into concrete actions
+    expect(contexto.encontrado).is.NaN;
 });
 
 Entonces('la lista tiene {int} elemento(s) almacenado(s)', function (cantidad) {
