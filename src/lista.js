@@ -6,7 +6,9 @@ module.exports = class Lista {
     }
 
     add(clave, valor) {
-        this.#elementos.push({'clave': clave, 'valor': valor});
+        if (isNaN(this.indice(clave))) {
+           this.#elementos.push({'clave': clave, 'valor': valor});
+        }
     }
 
     indice(clave) {
