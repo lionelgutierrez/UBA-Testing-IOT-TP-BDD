@@ -1,38 +1,43 @@
 module.exports = class Lista {
     #elementos;
-
-    constructor(){
+    
+    constructor() {
         this.#elementos = [];
     }
 
-    add(key,value) {
-        this.#elementos.push({"clave":key,"valor":value});  
+    add(key, value) {
+        this.#elementos.push({'clave': key, 'valor': value});
     }
 
-    count() {
-        return this.#elementos.length; 
-    }
-
-    delete(key) {
+    indexOf(key) {
         for (var indice = 0; indice < this.#elementos.length; indice++) {
             if (this.#elementos[indice].clave == key) {
-                this.#elementos.splice(indice, 1);
-                return;
-            }
-        }
-        return this.#elementos.splice(indice,1);
-    }
-
-    find(key) {
-        
-        for (var indice = 0; indice < this.#elementos.length; indice++) {
-            if (this.#elementos[indice].clave == key) {
-                return this.#elementos[indice].valor;
+                return indice;
             }
         }
         return NaN;
-
     }
+
+    delete(key) {
+        var indice = this.indexOf(key);
+        if (!isNaN(indice)) {
+            this.#elementos.splice(indice, 1);
+            return
+        }
+    }
+
+    find(key) {
+        var indice = this.indexOf(key);
+        if (!isNaN(indice)) {
+            return this.#elementos[indice].valor;
+        }
+        return NaN;
+    }
+    
+    count() {
+        return this.#elementos.length;
+    }
+}
 /*
     
     constructor(){
@@ -91,4 +96,3 @@ module.exports = class Lista {
 */
 
 
-}

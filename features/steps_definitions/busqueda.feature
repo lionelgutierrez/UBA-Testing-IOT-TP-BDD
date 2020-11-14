@@ -12,6 +12,6 @@ Escenario: Buscar un valor en una lista vacía
 @wip
 Escenario: Lista con un elemento
     Dado una lista con los siguientes elementos
-    | "uno"  | "valor"  |
-    Cuando se busca la clave "uno"
+    | "clave" | "valor"|
+    Cuando se busca la clave "clave"
     Entonces se obtiene el valor "valor"
