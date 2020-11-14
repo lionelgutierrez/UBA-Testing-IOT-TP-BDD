@@ -6,11 +6,21 @@ module.exports = class Lista {
     }
 
     add(key,value) {
-        this.#elementos.push({key,value});  
+        this.#elementos.push({"clave":key,"valor":value});  
     }
 
     count() {
         return this.#elementos.length; 
+    }
+
+    delete(key) {
+        for (var indice = 0; indice < this.#elementos.length; indice++) {
+            if (this.#elementos[indice].clave == key) {
+                this.#elementos.splice(indice, 1);
+                return;
+            }
+        }
+        return this.#elementos.splice(indice,1);
     }
 
 /*
