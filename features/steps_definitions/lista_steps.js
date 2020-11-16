@@ -31,16 +31,14 @@ Cuando('se elimina la clave {string}', function (clave) {
     contexto.lista.delete(clave);
 });
 
-Cuando('se recupera la lista', function () {
-    contexto.listaRecuperada = contexto.lista.devolverListaArray();
+Cuando('se recupera la lista de claves', function () {
+    contexto.listaclaves = contexto.lista.getKeysOrdered();
 });
 
-Entonces('el valor del primer elemento es {string}', function (valor) {
-    expect(contexto.listaRecuperada[0].valor).is.equal(valor);
-});
+Entonces('la lista de claves esta ordenada', function () {
+    var listaordenada = contexto.listaclaves.sort();
+    expect(contexto.listaclaves).is.equal(listaordenada);
 
-Entonces('el valor del segundo elemento es {string}', function (valor) {
-    expect(contexto.listaRecuperada[1].valor).is.equal(valor);
 });
 
 Entonces('se obtiene el valor NaN', function () {
